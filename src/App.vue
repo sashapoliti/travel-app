@@ -1,7 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
     <h1>WanderNote</h1>
@@ -9,6 +5,23 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
 </template>
+
+<script>
+import { RouterLink, RouterView } from 'vue-router';
+import { store } from './store/store.js';
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      store
+    };
+  },
+  methods: {
+    
+  },
+};
+</script>
 
 <style scoped lang="scss">
 header {
