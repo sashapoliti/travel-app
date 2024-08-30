@@ -1,12 +1,14 @@
 <template>
-  <div>
-    CIAO
-  </div>
+  <TripsList />
 </template>
 
 <script>
+import TripsList from '../components/TripsList.vue'
   export default {
     name: 'HomeView',
+    components: {
+        TripsList
+    }
     
   }
 </script>

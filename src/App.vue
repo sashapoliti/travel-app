@@ -7,18 +7,32 @@
 </template>
 
 <script>
-import { RouterLink, RouterView } from 'vue-router';
-import { store } from './store/store.js';
+import { RouterLink, RouterView } from "vue-router";
+import { store } from "./store/store.js";
+import axios from "axios";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      store
+      store,
     };
   },
   methods: {
-    
+    getTrips() {
+      axios
+        .get("/trips.json")
+        .then((response) => {
+          this.store.trips = response.data;
+          console.log(this.store.trips);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  mounted() {
+    this.getTrips();
   },
 };
 </script>
