@@ -33,6 +33,7 @@ export default {
   },
   mounted() {
     this.getTrips();
+    console.log(this.store.trip);
   },
 };
 </script>

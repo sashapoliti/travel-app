@@ -1,18 +1,24 @@
 <template>
-    <!-- add trip button -->
+  <!-- add trip button -->
   <div class="add-card">
     <div class="add-card-content">
-        <i class="fa-solid fa-plus"></i>
+      <i class="fa-solid fa-plus"></i>
     </div>
   </div>
 
   <!-- trip buttons list -->
-  <div v-for="trip in store.trips" class="add-card">
+  <div
+    v-for="trip in store.trips"
+    class="trips add-card"
+    :style="{ backgroundImage: 'url(' + trip.image_url + ')' }"
+    @click="selectTrip(trip)"
+  >
     <div class="add-card-content">
-        <div>{{ trip.place }}</div>
+      <div class="info">
+        <h2>{{ trip.place }}</h2>
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -24,6 +30,12 @@ export default {
     return {
       store,
     };
+  },
+  methods: {
+    selectTrip(trip) {
+      store.trip = trip;
+      console.log(store.trip);      
+    },
   },
 };
 </script>
@@ -50,6 +62,23 @@ export default {
     i {
       font-size: 2.5rem;
       font-weight: bold;
+    }
+  }
+}
+
+.trips {
+  background-size: cover;
+  background-position: center;
+  .add-card-content {
+    .info {
+        position: absolute;
+        top: 70%;
+        left: 20px;
+      h2 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
     }
   }
 }
