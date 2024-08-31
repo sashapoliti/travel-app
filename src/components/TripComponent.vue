@@ -1,5 +1,7 @@
 <template>
-  ciao ciao
+  <div id="trip-hero" :style="{ backgroundImage: 'url(' + store.trip.image_url + ')' }">
+
+  </div>
 </template>
 
 <script>
@@ -15,4 +17,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+#trip-hero {
+  position: relative;
+  width: 100%;
+  padding-top: 110%;
+  background-size: cover;
+  border-radius: 0 10% 0 10%;
+}
+</style>
