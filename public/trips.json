@@ -1,48 +1,83 @@
 [
-    {
-      "id": 1,
-      "title": "Viaggio in Italia",
-      "place": "Italia",
-      "description": "Un bellissimo viaggio in Italia visitando città storiche e località pittoresche.",
-      "start_date": "2024-07-01",
-      "end_date": "2024-07-10",
-      "image_url": "https://i0.wp.com/www.ourpassionfortravel.com/wp-content/uploads/2018/11/Venice-Edits-196.jpg?fit=3960%2C2640&ssl=1",
-      "days": [
-        {
-          "id": 1,
-          "trip_id": 1,
-          "title": "Primo Giorno: Roma",
-          "date": "2024-07-01",
-          "description": "Visita al Colosseo e ai Fori Imperiali",
-          "stages": [
-            {
-              "id": 1,
-              "day_id": 1,
-              "title": "Colosseo",
-              "description": "Visita al famoso anfiteatro romano",
-              "start_time": "09:00:00",
-              "end_time": "11:00:00",
-              "rating": 5,
-              "note": "Prenotare i biglietti in anticipo",
-              "image_url": "https://example.com/colosseo.jpg",
-              "latitude": 41.8902,
-              "longitude": 12.4922
-            },
-            {
-              "id": 2,
-              "day_id": 1,
-              "title": "Fori Imperiali",
-              "description": "Passeggiata tra i resti dell'antica Roma",
-              "start_time": "11:30:00",
-              "end_time": "13:00:00",
-              "rating": 4,
-              "note": "Portare una guida turistica",
-              "image_url": "https://example.com/fori_imperiali.jpg",
-              "latitude": 41.8924,
-              "longitude": 12.4853
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Viaggio in Italia",
+    "place": "Italia",
+    "description": "Un bellissimo viaggio in Italia visitando città storiche e località pittoresche.",
+    "start_date": "2024-07-01",
+    "end_date": "2024-07-10",
+    "image_url": "https://i0.wp.com/www.ourpassionfortravel.com/wp-content/uploads/2018/11/Venice-Edits-196.jpg?fit=3960%2C2640&ssl=1",
+    "days": [
+      {
+        "id": 1,
+        "trip_id": 1,
+        "title": "Primo Giorno: Roma",
+        "date": "2024-07-01",
+        "description": "Visita al Colosseo e ai Fori Imperiali",
+        "stages": [
+          {
+            "id": 1,
+            "day_id": 1,
+            "title": "Colosseo",
+            "description": "Visita al famoso anfiteatro romano",
+            "start_time": "09:00:00",
+            "end_time": "11:00:00",
+            "rating": 5,
+            "note": "Prenotare i biglietti in anticipo",
+            "image_url": "https://example.com/colosseo.jpg",
+            "latitude": 41.8902,
+            "longitude": 12.4922
+          },
+          {
+            "id": 2,
+            "day_id": 1,
+            "title": "Fori Imperiali",
+            "description": "Passeggiata tra i resti dell'antica Roma",
+            "start_time": "11:30:00",
+            "end_time": "13:00:00",
+            "rating": 4,
+            "note": "Portare una guida turistica",
+            "image_url": "https://example.com/fori_imperiali.jpg",
+            "latitude": 41.8924,
+            "longitude": 12.4853
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "trip_id": 1,
+        "title": "Secondo Giorno: Venezia",
+        "date": "2024-07-02",
+        "description": "Esplorazione della città di Venezia, tra canali e monumenti storici.",
+        "stages": [
+          {
+            "id": 3,
+            "day_id": 2,
+            "title": "Piazza San Marco",
+            "description": "Visita alla famosa piazza con la Basilica di San Marco",
+            "start_time": "09:00:00",
+            "end_time": "10:30:00",
+            "rating": 5,
+            "note": "Arrivare presto per evitare la folla",
+            "image_url": "https://example.com/piazza_san_marco.jpg",
+            "latitude": 45.4342,
+            "longitude": 12.3384
+          },
+          {
+            "id": 4,
+            "day_id": 2,
+            "title": "Giro in Gondola",
+            "description": "Un rilassante giro in gondola lungo i canali veneziani",
+            "start_time": "11:00:00",
+            "end_time": "12:00:00",
+            "rating": 4,
+            "note": "Negoziare il prezzo in anticipo",
+            "image_url": "https://example.com/giro_gondola.jpg",
+            "latitude": 45.4386,
+            "longitude": 12.3267
+          }
+        ]
+      }
+    ]
+  }
+]

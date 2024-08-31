@@ -1,4 +1,5 @@
 <template>
+  <!-- Hero -->
   <div
     id="trip-hero"
     :style="{ backgroundImage: 'url(' + store.trip.image_url + ')' }"
@@ -6,7 +7,29 @@
     <div class="info">
       <h2>{{ store.trip.title }}</h2>
       <p>{{ store.trip.description }}</p>
-      <p class="date">{{ store.trip.start_date }} | {{ store.trip.end_date }}</p>
+      <p class="date">
+        {{ store.trip.start_date }} | {{ store.trip.end_date }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Days -->
+  <div v-for="day in store.trip.days" class="days-card">
+    <div class="info">
+      <h2>{{ day.title }}</h2>
+      <p>{{ day.description }}</p>
+      <p class="date">
+        {{ day.date }}
+      </p>
+
+      <!-- Stages -->
+      <div v-for="stage in day.stages" class="stages-card">
+        <div class="info-stage">
+          <h4><i class="fa-solid fa-circle-dot"></i> {{ stage.title }}</h4>
+          <p>{{ stage.description }}</p>
+          <p class="date">{{ stage.start_time }} - {{ stage.end_time }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +70,21 @@ export default {
       &.date {
         font-size: 0.5rem;
         font-style: italic;
+      }
+    }
+  }
+}
+
+.days-card {
+  margin-top: 1rem;
+  .info {
+    .stages-card {
+      border-radius: 10px;
+      padding: 0.3rem;
+      margin-top: 0.6rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #f2f2f2;
       }
     }
   }
